@@ -126,8 +126,9 @@ body {
 
 .wrapper {
     position: relative;
+    top: 50px;
     width: 400px;
-    height: 440px;
+    height: 420px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -136,7 +137,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease ,height .2s ease;
 }
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 450px;
+}
+
 
 
 .wrapper .form-box {
@@ -151,13 +164,120 @@ body {
     right: 0;
     width: 45px;
     height: 45px;
-    background: #162938;
+    background: #0d522c;
     font-size: 2em;
     color: #fff;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
+
+
+.wrapper.active .form-box.login{
+   transition: none;
+   transform: translateX(-400px);
+}
+
+
+
+.wrapper .form-box.login{
+   transition: transform .18s ease;
+   transform: translateX(0);
+ }
+
+.wrapper .form-box.Register .term-forgot{
+    padding: 10px;
+}
+
+.wrapper .form-box.Registers{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+
+
+.wrapper.active .form-box.Registers{
+    transition: transform .18s ease;
+    transform: translateX(0);
+  }
+
+  /* Estrucuta de Wapper2 */
+
+
+
+/* Clase para animar la aparición */
+/* .active {
+    display: block; /* Cambia a block cuando se añada la clase *
+    opacity: 1; /* Totalmente visible *
+    transform: scale(1); /* Tamaño normal *
+} */
+
+.wrapper2 {
+    position: relative;
+    top: 50px;
+    width: 400px;
+    height: 450px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex; /* Cambiado a flex para alineación correcta */
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+
+
+.carousel-inner {
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    margin: 0 auto; /* Centra las imágenes */
+    width: 100%; /* Ajusta este porcentaje según el tamaño que quieras para las imágenes */
+    max-width: 250px; /* Establece un tamaño máximo para que no crezcan demasiado */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%); /* Cambia el color de las flechas si es necesario */
+}
+
+
+.wrapper2.active-popup{
+    transform: scale(1);
+}
+
+.wrapper2 .icon-closeB2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #0d522c;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
 
 .form-box h2{
     
@@ -230,7 +350,7 @@ body {
 }
 
 .remember-forgot a{
-    color: #162938;
+    color: #137b3e;;
     text-decoration: none;
 }
 
@@ -262,8 +382,15 @@ body {
     margin: 25px 0 10px;
 }
 
-.login-register p a {
+
+.login-register p {
     color: #162938;
+    text-decoration: none;
+    font-weight: 600; 
+}
+
+.login-register p a {
+    color: #137b3e;
     text-decoration: none;
     font-weight: 600; 
 }
@@ -274,5 +401,39 @@ body {
     text-decoration: underline; 
 }
 
+.InternoFomurlario {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Altura fija del contenedor */
+    overflow-y: auto; /* Activa el scroll vertical si el contenido excede la altura */
+    padding: -1px;
+    background-color: transparent; /* Color de fondo para mayor visibilidad */
+    border-radius: 10px;
+}
 
 
+.register_login{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+
+.register_login p {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600; 
+}
+
+.register_login p a {
+    color:  #137b3e;
+    text-decoration: none;
+    font-weight: 600; 
+}
+
+
+.register_login  p a:hover {
+    color: #0d522c;
+    text-decoration: underline; 
+}
