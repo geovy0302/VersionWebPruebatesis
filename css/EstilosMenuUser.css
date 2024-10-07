@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    margin-right: 10px; /* Ajusta la separación entre la imagen y el h2 */
+}
+
+.navigation a, .navigation button {
+    margin-left: 40px;
+    position: relative;
+    font-size: 1.1em;
+    color:#010101;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+
+.navigation a::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   width: 100%;
+   height: 3px;
+   background: #fff;
+   border-radius: 5px;
+   transform-origin: right;
+   transform: scalex(0);
+   transition: .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scalex(1);
+    
+ }
+
+ .navigation a:hover {
+    color:#0d522c;
+    
+ }
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation  .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1,.1em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation  .btnLogin-popup:hover{
+   
+    background: #fff;
+    color:#0d522c;
+}
+
+
+
+
+body {
+    background-image: url("http://localhost/MyMedicRec/images/navUserAg.png");
+    background-position: center 0%;
+    background-size: cover;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.img {
+    width: 80px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.imga {
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+}
+
+
+/* Parte del codigo para los botones */
+
+
+#botonesNegacion {
+    display: flex; /* Usa flexbox para alinear los botones */
+    flex-direction: column; /* Cambia la dirección a columna para que el título esté encima */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.button-container {
+    display: flex; /* Usa flexbox para alinear los botones uno al lado del otro */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 0; /* Espacio entre los botones */
+    padding: 0; /* Eliminar padding del contenedor */
+}
+
+.button-container button {
+    margin: 0; /* Eliminar margen predeterminado de los botones */
+}
+
+#botonesNegacion  button  {
+    width: 260px; /* Ancho fijo para los botones */
+    height: 260px; /* Alto fijo para los botones */
+    padding: 0; /* Eliminar padding del botón */
+    border: none; /* Eliminar borde del botón */
+    background: none; /* Eliminar fondo del botón */
+    display: flex; /* Usar flexbox en el botón para centrar la imagen */
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    align-items: center; /* Centrar la imagen verticalmente */
+}
+
+#botonesNegacion .img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho del botón */
+    height: 100%; /* Hacer que la imagen ocupe todo el alto del botón */
+    object-fit: cover; /* Mantener la proporción de la imagen y cubrir el botón */
+    display: block; /* Asegurarse de que la imagen se muestre como un bloque */
+}
+
