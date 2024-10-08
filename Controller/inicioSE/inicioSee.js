@@ -81,6 +81,7 @@ $(document).ready(function () {
                         let apellido = userData.Apellido_CU;
                         let cedula = userData.Cedula_DNI;
                         let email = userData.E_mail;
+                        let contadorModal= 0; 
         
                         // Aquí puedes almacenar los datos en localStorage o donde desees
                         localStorage.setItem("idUsuario", idUsuario);
@@ -88,6 +89,8 @@ $(document).ready(function () {
                         localStorage.setItem("apellido", apellido);
                         localStorage.setItem("cedula", cedula);
                         localStorage.setItem("email", email);
+                        localStorage.setItem('contadorModal', contadorModal);//Esto para controlar que el modal de bienvenida sólo aparezca cuando se inicia otra sesión. 
+                
         
                         // Redirigir o mostrar un mensaje de éxito
                         console.log("Inicio de Sesión Exitoso");
