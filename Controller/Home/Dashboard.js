@@ -13,6 +13,10 @@ $(document).ready(function(){
 
 
   //Sección para que sicertos elementos sean escondidp; 
+  //<!--  TitulitoCitasMedicas,TablaCitaMédica, MostraInfoVentas -->
+  $('#TitulitoCitasMedicas').hide();
+  $('#TablaCitasMedica').hide();
+  $('#MostraInfoVentas').hide();
   $('#image-containerAnces').hide();
   $('#image-containerAncesB').hide();
   $('#image-containerAncesC').hide();
@@ -127,6 +131,9 @@ $(document).ready(function(){
   }
   CargarPerfiles(); //Llamamos la función que cargará los datos del usuario
   MostrarTips();
+
+
+
 
   //BLOQUE DE INTRUCCIONES POR SI EL USUARIO QUIERE CERRAR SU SESIÓN
   $(document).on('click', '.cerrarSesionPacien', function () {
