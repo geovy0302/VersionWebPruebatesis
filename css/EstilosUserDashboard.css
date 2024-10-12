@@ -227,8 +227,8 @@ body {
     background-color: rgb(146, 151, 151);
 }
 
-.table-hover tbody tr:hover {
-    background-color: rgba(122, 114, 81, 0.7);
+.table-hoverBB tbody tr:hover td {
+    background-color: rgb(205, 194, 145);
     color: rgb(112, 24, 78);
 }
 
